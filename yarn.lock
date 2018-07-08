@@ -4783,6 +4783,13 @@ react-lifecycles-compat@^1.0.2:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-1.1.0.tgz#6641d0709bd5505329b5c90322147ef2d343485c"
 
+react-native-camera@rozele/react-native-camera#windows:
+  version "1.1.5"
+  resolved "https://codeload.github.com/rozele/react-native-camera/tar.gz/9d2865a142492c28c97895f8a90c6ece02d68bcb"
+  dependencies:
+    lodash "^4.17.4"
+    prop-types "^15.5.10"
+
 react-native-code-push@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/react-native-code-push/-/react-native-code-push-5.3.2.tgz#32bc019b37ab14c0c1065ac967b5913e1598dca4"
