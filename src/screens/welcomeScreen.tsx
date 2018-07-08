@@ -3,9 +3,17 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 import BaseScreen from '../components/baseScreen';
 import images from '../images';
 import Camera from 'react-native-camera';
+import ImageRecognizer from '../ImageRecognizer'
 
 export class WelcomeScreen extends React.Component {
     camera: any;
+    recognizer: any;
+    componentDidMount() {
+        this.recognizer = new ImageRecognizer({
+            model: require('../../assets/model.pb'),
+            labels: require('../../assets/labels.txt'),
+        });
+    }
     render() {
         return (
             <View style={{ flex: 1 }} testID="welcomeScreen" accessibilityLabel={"welcomeScreen"} accessible={true}>
@@ -26,7 +34,14 @@ export class WelcomeScreen extends React.Component {
         const options = {};
         try {
             const data = await this.camera.capture({ metadata: options });
-            alert("Picture taken");
+            const results = await this.recognizer.recognize({
+                image: data.path,
+                inputName: 'Placeholder',
+                outputName: 'loss',
+            });
+            if (results.length > 0) {
+                alert(`Name: ${results[0].name} - Confidence: ${results[0].confidence}`);
+            }
         }
         catch (err) {
             alert(err);
