@@ -142,6 +142,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-tensorflow')
     implementation project(':react-native-camera')
     implementation project(':react-native-code-push')
     implementation project(':appcenter-crashes')
