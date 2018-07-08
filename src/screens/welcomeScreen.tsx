@@ -41,6 +41,8 @@ export class WelcomeScreen extends React.Component {
             });
             if (results.length > 0) {
                 alert(`Name: ${results[0].name} - Confidence: ${results[0].confidence}`);
+            } else {
+                alert(`Nada...`);
             }
         }
         catch (err) {
