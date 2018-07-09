@@ -7,17 +7,6 @@ PODS:
   - AppCenterReactNativeShared (1.6.0):
     - AppCenter/Core (= 1.7.1)
   - AppCenterXCUITestExtensions (1.0.0)
-  - React (0.11.0):
-    - React/Core (= 0.11.0)
-  - react-native-camera (1.1.5):
-    - React
-    - react-native-camera/RCT (= 1.1.5)
-    - react-native-camera/RN (= 1.1.5)
-  - react-native-camera/RCT (1.1.5):
-    - React
-  - react-native-camera/RN (1.1.5):
-    - React
-  - React/Core (0.11.0)
   - TensorFlow-experimental (1.1.1)
 
 DEPENDENCIES:
@@ -25,7 +14,6 @@ DEPENDENCIES:
   - AppCenter/Crashes (~> 1.7.1)
   - AppCenterReactNativeShared (~> 1.6.0)
   - AppCenterXCUITestExtensions (= 1.0.0)
-  - react-native-camera (from `../node_modules/react-native-camera`)
   - TensorFlow-experimental
 
 SPEC REPOS:
@@ -33,21 +21,14 @@ SPEC REPOS:
     - AppCenter
     - AppCenterReactNativeShared
     - AppCenterXCUITestExtensions
-    - React
     - TensorFlow-experimental
-
-EXTERNAL SOURCES:
-  react-native-camera:
-    :path: "../node_modules/react-native-camera"
 
 SPEC CHECKSUMS:
   AppCenter: 53349f138e596f2514f7559bb50a7e6e55219f17
   AppCenterReactNativeShared: 9174f9a976f5d4b1949dccfac7f3a38399478c87
   AppCenterXCUITestExtensions: 8825ed941664fa21d6740a5ed6928a84c06623ac
-  React: ab1a2e21deb34965c38328d5ec40cc7d12c6050a
-  react-native-camera: 68ad5143d2d0636236d46c7de8d2a6455ca52a36
   TensorFlow-experimental: c38ed2a43acaa2d42ce4174ac076efaa76e26a12
 
-PODFILE CHECKSUM: ccb07f349ba3dc18fdd87b13123ba134f7355ff8
+PODFILE CHECKSUM: 82463fc48b1b3f30de3dd383181376b84ab6b8db
 
 COCOAPODS: 1.5.0
