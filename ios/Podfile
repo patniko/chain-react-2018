@@ -26,6 +26,7 @@ target 'AppCenterSample' do
   pod 'AppCenter/Crashes', '~> 1.7.1'
   pod 'AppCenter/Analytics', '~> 1.7.1'
   pod 'AppCenterReactNativeShared', '~> 1.6.0'
+  pod 'TensorFlow-experimental'
 
   platform :ios, '9.0'
   pod 'react-native-camera', :path => '../node_modules/react-native-camera'
