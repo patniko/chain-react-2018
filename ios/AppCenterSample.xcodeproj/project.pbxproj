@@ -449,7 +449,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD18DCE520F2DF8200598EBE /* libRNCamera.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -463,13 +462,14 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				CD18DCE520F2DF8200598EBE /* libRNCamera.a in Frameworks */,
+				6B408CB8D69B467B97FCEAAD /* libRNTensorflow.a in Frameworks */,
 				F5BDCDD30944483D93B1D4D5 /* libAppCenterReactNative.a in Frameworks */,
 				4DDC7C155DF24F9ABD082034 /* libAppCenterReactNativeAnalytics.a in Frameworks */,
 				110A6083461D4819B86CAB4F /* libAppCenterReactNativeCrashes.a in Frameworks */,
 				9D21814384EB4C699A381F89 /* libCodePush.a in Frameworks */,
 				E266E77111B64A28B0DC59BA /* libz.tbd in Frameworks */,
 				079931EEF4BD415D156B82D2 /* Pods_AppCenterSample.framework in Frameworks */,
-				6B408CB8D69B467B97FCEAAD /* libRNTensorflow.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,7 +837,6 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				8B09AB925F572257C596E222 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -915,7 +914,7 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 285W24646W;
+						DevelopmentTeam = FFY96ZBU8L;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
@@ -1454,24 +1453,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		8B09AB925F572257C596E222 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AppCenterSample/Pods-AppCenterSample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/React/React.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppCenterSample/Pods-AppCenterSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DEDDE77C77BADDFEF2A8B1C9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1573,7 +1554,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 285W24646W;
+				DEVELOPMENT_TEAM = FFY96ZBU8L;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1611,7 +1592,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 285W24646W;
+				DEVELOPMENT_TEAM = FFY96ZBU8L;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
@@ -1657,7 +1638,12 @@
 					"$(SRCROOT)/../node_modules/react-native-tensorflow/ios",
 				);
 				INFOPLIST_FILE = AppCenterSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1684,7 +1670,12 @@
 					"$(SRCROOT)/../node_modules/react-native-tensorflow/ios",
 				);
 				INFOPLIST_FILE = AppCenterSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
