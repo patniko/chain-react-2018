@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Platform } from 'react-native';
 import BaseScreen from '../components/baseScreen';
 import images from '../images';
 import Camera from 'react-native-camera';
@@ -21,6 +21,11 @@ export class WelcomeScreen extends React.Component {
                     ref={(cam) => {
                         this.camera = cam;
                     }}
+                    captureTarget={
+                        Platform.OS == 'ios' 
+                        ? Camera.constants.CaptureTarget.disk
+                        : Camera.constants.CaptureTarget.cameraRoll
+                    }
                     style={styles.preview}
                     aspect={Camera.constants.Aspect.fill}>
                 </Camera>
@@ -33,16 +38,23 @@ export class WelcomeScreen extends React.Component {
     async takePicture() {
         const options = {};
         try {
-            const data = await this.camera.capture({ metadata: options });
-            const results = await this.recognizer.recognize({
-                image: data.path,
-                inputName: 'Placeholder',
-                outputName: 'loss',
+            const data = await this.camera.capture({ 
+                metadata: options, 
+                captureTarget: Camera.constants.CaptureTarget.temp, 
+                captureQuality: Camera.constants.CaptureQuality["480p"]
             });
-            if (results.length > 0) {
-                alert(`Name: ${results[0].name} - Confidence: ${results[0].confidence}`);
-            } else {
-                alert(`Nada...`);
+            if(data) {
+                alert(data.path);
+                const results = await this.recognizer.recognize({
+                    image: data.path,
+                    inputName: 'Placeholder',
+                    outputName: 'loss',
+                });
+                if (results.length > 0) {
+                    alert(`Name: ${results[0].name} - Confidence: ${results[0].confidence}`);
+                } else {
+                    alert(`Nada...`);
+                }
             }
         }
         catch (err) {
