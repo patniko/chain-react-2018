@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { TabNavigator } from 'react-navigation';
 import { WelcomeScreen } from './screens/welcomeScreen';
+import { CodePushScreen } from './screens/codePushScreen';
 import { BuildScreen } from './screens/buildScreen';
 import { TestScreen } from './screens/testScreen';
 import { DistributeScreen } from './screens/distributeScreen';
 import { CrashesScreen } from './screens/crashesScreen';
 import { AnalyticsScreen } from './screens/analyticsScreen';
 import { PushScreen } from './screens/pushScreen';
-import { CodePushScreen } from './screens/codePushScreen';
 
 const RootTabNavigator = TabNavigator(
   {
@@ -21,6 +21,9 @@ const RootTabNavigator = TabNavigator(
     Test: {
       screen: TestScreen,
     },
+    CodePush: {
+      screen: CodePushScreen
+    },
     Distribute: {
       screen: DistributeScreen,
     },
@@ -32,9 +35,6 @@ const RootTabNavigator = TabNavigator(
     },
     Push: {
       screen: PushScreen,
-    },
-    CodePush: {
-      screen: CodePushScreen
     }
   },
   {
@@ -54,6 +54,6 @@ const RootTabNavigator = TabNavigator(
 
 export default class App extends React.Component {
   render() {
-    return <RootTabNavigator />;
+  return <RootTabNavigator />;
   }
 }

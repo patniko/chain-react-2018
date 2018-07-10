@@ -4,5 +4,8 @@ module.exports = {
     },
     getSourceExts() {
       return ['ts', 'tsx'];
+    },
+    getAssetExts() {
+      return ['pb', 'txt']
     }
   }
