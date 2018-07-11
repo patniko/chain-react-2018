@@ -1,5 +1,5 @@
 <resources>
-  <string name="reactNativeCodePush_androidDeploymentKey" moduleConfig="true">BHmJEgmrNQkWWsoFkyPJ7EpOLI_eHyWNoZxm7</string>
+  <string name="reactNativeCodePush_androidDeploymentKey" moduleConfig="true">ruViUhIKF3nJSMQzmBNKQBx1X5U2SyCfHZEXX</string>
   <string name="app_name">AppCenterSample</string>
   <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true">ALWAYS_SEND</string>
   <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true">ALWAYS_SEND</string>
